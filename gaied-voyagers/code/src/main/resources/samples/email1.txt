@@ -1,0 +1,7 @@
+From: sarah@example.com
+To: support@example.com
+Subject: Urgent: Server Down
+Attachments: server_logs.zip
+
+The production server has been down since 2 AM.
+Attached are the logs for investigation.

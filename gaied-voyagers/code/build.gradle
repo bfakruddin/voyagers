@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // HTTP client for OpenAI API
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    // JSON parsing
+    implementation 'com.google.code.gson:gson:2.10.1'
+    // Email parsing (optional)
+    implementation 'com.sun.mail:javax.mail:1.6.2'
+
+    // HTTP client for local Ollama API
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+
+    // DJL PyTorch engine
+    implementation 'ai.djl.pytorch:pytorch-engine:0.25.0'
+    // DJL API
+    implementation 'ai.djl:api:0.25.0'
+
+}
+
+application {
+    mainClass = 'com.example.EmailParserLLM'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
