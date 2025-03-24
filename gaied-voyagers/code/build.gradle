@@ -6,8 +6,15 @@ plugins {
 group 'com.example'
 version '1.0-SNAPSHOT'
 
+/*repositories {
+    mavenCentral()
+}*/
+
 repositories {
     mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
 }
 
 dependencies {
@@ -26,6 +33,8 @@ dependencies {
     // DJL API
     implementation 'ai.djl:api:0.25.0'
 
+    // Hugging Face tokenizers (optional, for text processing)
+//    implementation 'com.github.huggingface:tokenizers:0.13.3'
 }
 
 application {

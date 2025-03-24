@@ -1,25 +1,28 @@
-package ollamaapi;
+package huggingfaceapi;
 
 import ai.djl.Model;
 import ai.djl.nn.Block;
 import ai.djl.nn.SequentialBlock;
 import ai.djl.training.DefaultTrainingConfig;
 import ai.djl.training.Trainer;
+import ai.djl.training.TrainingConfig;
+import ai.djl.training.dataset.Dataset;
+import ai.djl.training.dataset.RandomAccessDataset;
 import ai.djl.training.listener.TrainingListener;
 import ai.djl.training.loss.Loss;
 import ai.djl.training.optimizer.Optimizer;
 import ai.djl.training.tracker.Tracker;
-
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import ollamaapi.EmailDataset;
+import ollamaapi.EmailParserOllama;
 
 import java.io.FileWriter;
-import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FineTuneMistral {
+public class FineTuneHuggingFaceModel {
     public static void main(String[] args) throws Exception {
         // Step 1: Parse .eml files and create training data
         List<String> emlFiles = List.of(

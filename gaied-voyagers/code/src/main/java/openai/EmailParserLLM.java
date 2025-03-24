@@ -33,7 +33,8 @@ public class EmailParserLLM {
         """;
 
     public static void main(String[] args) throws IOException {
-        String apiKey = System.getenv("OPENAI_API_KEY");
+//        String apiKey = System.getenv("OPENAI_API_KEY");
+        String apiKey = "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";
         OpenAIClient client = new OpenAIClient(apiKey);
 
         // Load sample email
